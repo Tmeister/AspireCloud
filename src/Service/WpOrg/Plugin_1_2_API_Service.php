@@ -15,9 +15,7 @@ readonly class Plugin_1_2_API_Service {
     }
 
     public function getPluginInformation( string $slug ): array {
-        var_dump($slug);
         $plugin = $this->pluginRepository->findOneBy( [ 'slug' => $slug ] );
-        dd($plugin);
 
         if ( ! $plugin ) {
             throw new NotFoundHttpException( 'Plugin not found' );
