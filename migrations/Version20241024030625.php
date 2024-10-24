@@ -57,7 +57,7 @@ final class Version20241024030625 extends AbstractMigration
                          versions jsonb default null,
                          upgrade_notice jsonb default null,
                          primary key (id),
-                         constraint fk_plugins_sync_id
+                         constraint fk_sync_id
                            foreign key(sync_id)
                            references sync_plugins (id)
                      )
